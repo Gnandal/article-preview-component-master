@@ -1,10 +1,11 @@
-function toggleShareOptions() {
-    const shareOptionComponent = document.querySelector(".share");
-    const socialMediaComponent = document.querySelector(".social-media");
-    const authorComponent = document.querySelector(".author");
+const shareOptionComponent = document.querySelector(".share");
+const socialMediaComponent = document.querySelector(".social-media");
+const authorComponent = document.querySelector(".author");
+let classAdded = false;
 
-    let classAdded = false;
-    if(window.screen.availWidth > 950) {
+const toggleShareOptions = () => {
+
+    if(window.innerWidth > 950) {
         shareOptionComponent.style.width = "fit-content";
         shareOptionComponent.style.backgroundColor = "#FFF";
         authorComponent.style.display = "flex"; 
@@ -23,3 +24,20 @@ function toggleShareOptions() {
 
     socialMediaComponent.style.display = classAdded ? "flex" : "none";
 }
+
+onresize = (event) => {
+    if(window.innerWidth > 950) {
+        shareOptionComponent.style.width = "fit-content";
+        shareOptionComponent.style.backgroundColor = "#FFF";
+        authorComponent.style.display = "flex"; 
+
+        shareOptionComponent.childNodes[1].classList.replace("share-option-mobile", "share-option-desktop");
+    }else {
+        shareOptionComponent.childNodes[1].classList.replace("share-option-desktop", "share-option-mobile");
+        authorComponent.style.display = classAdded ? "none" : "flex"; 
+        
+        shareOptionComponent.style.width = classAdded ? "100%" : "20%"
+        shareOptionComponent.style.backgroundColor = classAdded ? "hsl(214, 17%, 51%)" : "#FFF"
+    }
+    
+};
