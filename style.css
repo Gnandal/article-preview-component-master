@@ -101,14 +101,6 @@ button {
     cursor: pointer;
 }
 
-.share-option-desktop button:hover {
-    background-color: var(--color-desatured-dark-blue);
-}
-
-.share-option-desktop button:hover img {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(4836%) hue-rotate(180deg) brightness(105%) contrast(108%);
-}
-
 .share-option-desktop {
     z-index: 2;
     position: absolute;
