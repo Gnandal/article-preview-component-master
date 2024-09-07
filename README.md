@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/Gnandal/testimonials-grid-section-main)
-- Live Site URL: [Demo](https://gnandal.github.io/testimonials-grid-section-main/)
+- Solution URL: [Github Repo](https://github.com/Gnandal/article-preview-component-master)
+- Live Site URL: [Demo](https://gnandal.github.io/article-preview-component-master)
 
 ## My process
 
